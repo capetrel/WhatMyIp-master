@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout_show_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.capetrel.whatmyip.ShowActivity">
+
+    <!-- progress bar
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    -->
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MON ADRESSE I.P." />
+
+    <TextView
+        android:id="@+id/text_view_my_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Adresse IP"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INFORMATION" />
+
+    <!-- Ici la carte google map avec les info -->
+
+    <fragment
+        android:id="@+id/map_view"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"/>
+
+    <TextView
+        android:id="@+id/text_view_fai_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Le F.A.I. de cette I.P."/>
+
+    <TextView
+        android:id="@+id/text_view_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="La ville de cette I.P."/>
+
+    <TextView
+        android:id="@+id/text_view_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Le Pays de la ville"/>
+
+    <!-- Fin de la carte google map -->
+
+    <!-- Label FAVORIS -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:paddingRight="100dp"
+            android:textColor="@color/colorPrimary"
+            android:text="FAVORIS" />
+
+        <TextView
+            android:id="@+id/text_view_add_favoris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:paddingLeft="100dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/colorPrimary"
+            android:onClick="onClickAlertDialog"
+            android:text="+" />
+
+    </LinearLayout>
+    <!-- Fin falbel FAVORIS -->
+    <ListView
+        android:id="@+id/list_view_favoris"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+</LinearLayout>
